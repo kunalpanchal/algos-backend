@@ -20,7 +20,6 @@ module.exports = {
             request.end();
         } else {
             await res.json({ output: await getDataFromRedis(input) });
-            console.log('11')
         }
     }
 }
