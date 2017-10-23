@@ -5,9 +5,8 @@ const should = chai.should();
 const expect = chai.expect;
 
 chai.use(chaiHttp);
-
-describe('Frequent Words', () => {
-    describe('/GET get-frequent-words', () => {
+describe('/GET get-frequent-words', () => {
+    describe('Frequent Words', () => {
         it('it should GET the top 90 words', (done) => {
             chai.request(server)
                 .get('/get-frequent-words?input=90')
@@ -35,10 +34,7 @@ describe('Frequent Words', () => {
         });
     });
 
-});
-
-describe('Frequent Words Errors', () => {
-    describe('/GET get-frequent-words', () => {
+    describe('Frequent Words Errors', () => {
         it('it should throw error if input param is not sent', (done) => {
             chai.request(server)
                 .get('/get-frequent-words')
